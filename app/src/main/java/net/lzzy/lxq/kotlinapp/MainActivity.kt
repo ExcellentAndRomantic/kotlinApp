@@ -12,7 +12,7 @@ import androidx.appcompat.app.AlertDialog
 class MainActivity : AppCompatActivity() {
 
     private lateinit var listView:ListView
-    private var adapterDate= arrayOf("记事本","获取网页源码","RecyclerView","视频播放","item","item","item","item")
+    private var adapterDate= arrayOf("记事本","获取网页源码","RecyclerView","视频播放","数据库","item","item","item")
     private lateinit var arrayAdapter:ArrayAdapter<String>
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -57,6 +57,9 @@ class MainActivity : AppCompatActivity() {
 
                     dialog.setNegativeButton("取消",null)
                     dialog.show()
+                }
+                4->{
+                    startActivity(Intent(applicationContext,SQLTableActivity::class.java))
                 }
 
             }
